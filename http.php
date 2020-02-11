@@ -10,7 +10,7 @@ $serv = new swoole_http_server($host, $port);
 $serv->on('request',function($request,$response){
     var_dump($request);
     $response->header("Content-Type","text/html;charset=utf-8");//设置返回头信息
-    $response->end('hello world '.rand(100));//发送信息
+    $response->end('hello world '.rand(100,999));//发送信息
 });
 
 $serv->start();
