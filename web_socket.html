@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>web socket</title>
+    </head>
+
+    <body>
+        <script>
+         var wsServer = 'ws://http://118.25.17.80:9504';
+         var webSocket = new WebSocket(wsServer);
+         webSocket.onopen = function(evt){
+             console.log('连接成功');
+         }
+
+         webSocket.colse = function(evt){
+             console.log('关闭');
+         }
+
+         webSocket.onmessage = function(evt){
+             console.log(evt.data);
+         }
+
+         webSocket.onerror = function(evt,e){
+             console.log('error');
+         }
+
+        </script>
+    </body>
+
+</html>
