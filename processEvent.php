@@ -14,7 +14,7 @@ for($i=0; $i < $worker_num; $i++){
 
 //进程对应执行的函数
 function doProcess(swoole_process $process){
-    $process->wirte("PID: {$process->pid}");  //到子进程写入信息
+    $process->write("PID: {$process->pid}");  //到子进程写入信息
     echo "写入信息: {$process->pid} {$process->callback}";
 }
 
