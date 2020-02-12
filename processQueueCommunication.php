@@ -11,7 +11,7 @@ for($i=0; $i < $worker_num; $i++){
     $redirect_stdin_stdout = false;
     $create_pipe = false;
     $process = new swoole_process($callback, $redirect_stdin_stdout, $create_pipe);//创建单独新进程
-    $process->useQueue; //开启队列，类似与全局函数
+    $process->useQueue(); //开启队列，类似与全局函数
     $pid = $process->start(); //创建进程,并获取进程id
 
     $workers[$pid] = $process; //存入进程数组
