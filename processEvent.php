@@ -22,10 +22,9 @@ function doProcess(swoole_process $process){
 foreach($workers as $process){
     //添加
     $sock = $process->pipe;
-    $read_callback = function($pipe) use ($process){
+    swoole_event_add($sock, function($pipe) use ($process){
         $data = $process->read();  //能否读取数据
-        echo "接收到: {$data} \n";
-    };
-    swoole_event_add($sock, $read_callback);
+            echo "接收到: {$data} \n";
+    });
 }
 
