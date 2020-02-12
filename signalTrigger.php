@@ -3,7 +3,12 @@
 
 //触发函数
 swoole_process::signal(SIGALRM,function(){
-    echo "1 \n";
+    static $i = 0;
+    echo "$i \n";
+    $i++;
+    if($i>10){
+        swoole_process::alarm(-1); //清除定时器
+    }
 });
 
 //定时信号
