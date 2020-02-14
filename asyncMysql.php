@@ -7,10 +7,10 @@
 $db = new swoole_mysql();
 
 $config = [
-    'host' => '',
-    'user' => '',
-    'password' => '',
-    'database' => '',
+    'host' => '106.53.95.41',
+    'user' => 'root',
+    'password' => 'w63eXEhdBWLr6cik',
+    'database' => 'online',
     'charset' => 'utf8',
 ];
 
