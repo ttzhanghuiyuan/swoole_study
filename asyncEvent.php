@@ -3,7 +3,7 @@
 $remote_socket = 'tcp://www.qq.com:80';
 $fp = stream_socket_client($remote_socket, $errno, $errstr, 30);
 $string = 'GET / HTTP/1.1\r\nHost: www.qq.com\r\n\r\n';
-fwrite($fp, $string, $length);
+fwrite($fp, $string);
 
 
 //添加异步事件
