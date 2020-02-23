@@ -12,7 +12,7 @@ class App
 			$pathInfo = $request->server['path_info'];
 			$method = $request->server['request_method'];
 			//分发路由
-			\Abner\Core\Route\Route::dispatch(method, pathInfo);
+			\Abner\Route\Route::dispatch(method, pathInfo);
 			
 			$response->end("<h1>abner start </h1>");
 		});
@@ -57,7 +57,7 @@ class App
 						'handle' => $reflect->getName()."@".$method->getName(),
 					];
 					
-					\Abner\Core\Route\Route::addRoute('GET', $routeInfo);
+					\Abner\Route\Route::addRoute('GET', $routeInfo);
                 }
             }
         }

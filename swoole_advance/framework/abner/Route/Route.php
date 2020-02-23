@@ -1,5 +1,5 @@
 <?php
-namespace Abner\Core\Route;
+namespace Abner\Route;
 
 
 
