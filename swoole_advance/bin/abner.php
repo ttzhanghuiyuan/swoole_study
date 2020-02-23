@@ -11,4 +11,4 @@
 
 require dirname(__DIR__)."/vendor/autoload.php";
 
-(new \Abner\Core\App())->run();
+(new \Abner\App())->run();
